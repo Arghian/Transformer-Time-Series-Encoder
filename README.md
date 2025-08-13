@@ -12,15 +12,15 @@ Berikut merupakan grafik untuk IHSG serta grafik transformasi data IHSG mengguna
 
 Pada bagian ***set-hyperparameter***, saya memisahkannya agar dapat lebih mudah untuk pemodelan dengan penjelasan sebagai berikut:
 **Pengaturan Proses Pelatihan**
-patience & min_delta: Parameter ini berfungsi sebagai "rem darurat". Jika model berhenti menunjukkan kemajuan yang berarti pada data baru setelah beberapa siklus, pelatihan akan dihentikan secara otomatis untuk mencegah overfitting (terlalu menghafal data latihan).
-splitting: Ini adalah rasio untuk membagi data menjadi dua set: satu untuk melatih model dan satu lagi untuk menguji seberapa baik performanya pada data yang belum pernah dilihat.
-epochs: Menentukan batas maksimal berapa kali model akan "belajar" dari keseluruhan data latihan.
-learning_rate: Mengatur seberapa cepat model mengoreksi kesalahannya selama proses belajar.
-batch_size: Jumlah sampel data yang diproses oleh model dalam satu langkah sebelum memperbarui pengetahuannya.
+1. patience & min_delta: Parameter ini berfungsi sebagai "rem darurat". Jika model berhenti menunjukkan kemajuan yang berarti pada data baru setelah beberapa siklus, pelatihan akan dihentikan secara otomatis untuk mencegah overfitting (terlalu menghafal data latihan).
+2. splitting: Ini adalah rasio untuk membagi data menjadi dua set: satu untuk melatih model dan satu lagi untuk menguji seberapa baik performanya pada data yang belum pernah dilihat.
+3. epochs: Menentukan batas maksimal berapa kali model akan "belajar" dari keseluruhan data latihan.
+4. learning_rate: Mengatur seberapa cepat model mengoreksi kesalahannya selama proses belajar.
+5. batch_size: Jumlah sampel data yang diproses oleh model dalam satu langkah sebelum memperbarui pengetahuannya.
 **Pengaturan Arsitektur Model Transformer**
-input_window: Menentukan panjang "memori" model, yaitu berapa banyak data historis (hari) yang dilihat untuk membuat satu prediksi.
-output_window: Menentukan seberapa jauh ke depan model akan mencoba untuk meramal.
-fs (feature_size): Mengatur "kedalaman" atau kompleksitas informasi yang direpresentasikan oleh setiap titik data di dalam model.
-nl (num_layers): Jumlah lapisan pemrosesan yang ditumpuk di dalam inti Transformer. Semakin banyak lapisan, semakin kompleks pola yang bisa dipelajari.
-do (dropout): Sebuah teknik untuk membuat model lebih tangguh dengan cara "melupakan" sebagian kecil informasi secara acak selama pelatihan, sehingga tidak terlalu bergantung pada pola tertentu.
-nh (num_heads): Memungkinkan model untuk memperhatikan beberapa bagian berbeda dari data historis secara bersamaan, seperti seorang analis yang melihat beberapa indikator sekaligus.
+6. input_window: Menentukan panjang "memori" model, yaitu berapa banyak data historis (hari) yang dilihat untuk membuat satu prediksi.
+7. output_window: Menentukan seberapa jauh ke depan model akan mencoba untuk meramal.
+8. fs (feature_size): Mengatur "kedalaman" atau kompleksitas informasi yang direpresentasikan oleh setiap titik data di dalam model.
+9. nl (num_layers): Jumlah lapisan pemrosesan yang ditumpuk di dalam inti Transformer. Semakin banyak lapisan, semakin kompleks pola yang bisa dipelajari.
+10. do (dropout): Sebuah teknik untuk membuat model lebih tangguh dengan cara "melupakan" sebagian kecil informasi secara acak selama pelatihan, sehingga tidak terlalu bergantung pada pola tertentu.
+11. nh (num_heads): Memungkinkan model untuk memperhatikan beberapa bagian berbeda dari data historis secara bersamaan, seperti seorang analis yang melihat beberapa indikator sekaligus.

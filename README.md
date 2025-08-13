@@ -19,9 +19,9 @@ Pada bagian ***set-hyperparameter***, saya memisahkannya agar dapat lebih mudah 
 5. batch_size: Jumlah sampel data yang diproses oleh model dalam satu langkah sebelum memperbarui pengetahuannya.
 
 **Pengaturan Arsitektur Model Transformer**
-7. input_window: Menentukan panjang "memori" model, yaitu berapa banyak data historis (hari) yang dilihat untuk membuat satu prediksi.
-8. output_window: Menentukan seberapa jauh ke depan model akan mencoba untuk meramal.
-9. fs (feature_size): Mengatur "kedalaman" atau kompleksitas informasi yang direpresentasikan oleh setiap titik data di dalam model.
-10. nl (num_layers): Jumlah lapisan pemrosesan yang ditumpuk di dalam inti Transformer. Semakin banyak lapisan, semakin kompleks pola yang bisa dipelajari.
-11. do (dropout): Sebuah teknik untuk membuat model lebih tangguh dengan cara "melupakan" sebagian kecil informasi secara acak selama pelatihan, sehingga tidak terlalu bergantung pada pola tertentu.
-12. nh (num_heads): Memungkinkan model untuk memperhatikan beberapa bagian berbeda dari data historis secara bersamaan, seperti seorang analis yang melihat beberapa indikator sekaligus.
+1. input_window: Menentukan panjang "memori" model, yaitu berapa banyak data historis (hari) yang dilihat untuk membuat satu prediksi.
+2. output_window: Menentukan seberapa jauh ke depan model akan mencoba untuk meramal.
+3. fs (feature_size): Mengatur "kedalaman" atau kompleksitas informasi yang direpresentasikan oleh setiap titik data di dalam model.
+4. nl (num_layers): Jumlah lapisan pemrosesan yang ditumpuk di dalam inti Transformer. Semakin banyak lapisan, semakin kompleks pola yang bisa dipelajari.
+5. do (dropout): Sebuah teknik untuk membuat model lebih tangguh dengan cara "melupakan" sebagian kecil informasi secara acak selama pelatihan, sehingga tidak terlalu bergantung pada pola tertentu.
+6. nh (num_heads): Memungkinkan model untuk memperhatikan beberapa bagian berbeda dari data historis secara bersamaan, seperti seorang analis yang melihat beberapa indikator sekaligus.
